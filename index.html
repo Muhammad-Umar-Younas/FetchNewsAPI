@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Project</title>
+    <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- navbar start  -->
+   <nav class="navbar navbar-expand-lg mynav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" onclick="reload()"> <img src="logo.png " alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " id="PSL" onclick="onNavItemClick('PSL')"  aria-current="page" href="#">PSL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="Finance" onclick="onNavItemClick('Finance')" href="#">Finance</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="Politics" onclick="onNavItemClick('Politics')" href="#">Politics</a>
+          </li>
+        
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder=" e.g Sceince" aria-label="Search" id="search-text">
+          <button class="btn btn-danger me-4" type="submit" id="search-button">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+   <!-- navbar end -->
+
+   <main>
+    <div class="cards-container" id="cards-container">
+     
+    </div>
+   </main>
+
+   <template id="template-news-card">
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" id="news-img" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" id="news-title"> this is the title</h5>
+        <h6 id="news-source"> News Gadget 26/8/2023 </h6>
+        <p class="card-text" id="news-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+       
+      </div>
+    </div>
+   </template>
+    
+
+    <script src="bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
